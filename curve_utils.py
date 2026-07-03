@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-curve = pd.read_csv("treasury_curve_2023_05_15.csv")
+curve = pd.read_csv("CLASSIFIED")
 
 curve["years"] = pd.to_numeric(curve["years"], errors="coerce")
 curve["yield"] = pd.to_numeric(curve["yield"], errors="coerce")
