@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from curve_utils import get_rate
 
-df = pd.read_csv("clean_trades.csv", low_memory=False)
+df = pd.read_csv("CLASSIFIED", low_memory=False)
 
 df["TradeDate"] = pd.to_datetime(df["TradeDate"], errors="coerce")
 df["Maturity_trade"] = pd.to_datetime(df["Maturity_trade"], errors="coerce")
@@ -43,5 +43,5 @@ print(f"coupon    = {b1:.6f}")
 print(f"discount  = {b2:.6f}")
 print(f"years     = {b3:.6f}")
 
-df.to_csv("fixed_rate_baseline_results.csv", index=False)
-print("\nSaved: fixed_rate_baseline_results.csv")
+df.to_csv("CLASSIFIED", index=False)
+print("\nSaved: CLASSIFIED")
