@@ -1,7 +1,7 @@
 import pandas as pd
 from curve_utils import get_rate
 
-df = pd.read_csv("clean_trades.csv", low_memory=False)
+df = pd.read_csv("CLASSIFIED", low_memory=False)
 
 df["TradeDate"] = pd.to_datetime(df["TradeDate"], errors="coerce")
 df["Maturity_trade"] = pd.to_datetime(df["Maturity_trade"], errors="coerce")
